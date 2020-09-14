@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,16 @@
 		575D248125033A0E0012A0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575D248025033A0E0012A0FA /* Assets.xcassets */; };
 		575D248525033A5D0012A0FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D248425033A5D0012A0FA /* ViewController.swift */; };
 		575D24872506C0F50012A0FA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D24862506C0F50012A0FA /* MainTabBarController.swift */; };
+		575D248A2507432A0012A0FA /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D24892507432A0012A0FA /* PodcastsSearchController.swift */; };
+		575D248D250746C30012A0FA /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D248C250746C30012A0FA /* Podcast.swift */; };
+		575D24902509BC390012A0FA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575D248F2509BC390012A0FA /* APIService.swift */; };
+		57BE0A52250FEFBA00D9ACB2 /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BE0A51250FEFBA00D9ACB2 /* PodcastCell.swift */; };
+		57BE0A54250FF01900D9ACB2 /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57BE0A53250FF01900D9ACB2 /* PodcastCell.xib */; };
+		CCEEE7DDFDC29CF25244C036 /* Pods_Plex_PodCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AE5AAE47D40F7AC7A3D692 /* Pods_Plex_PodCast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02AE5AAE47D40F7AC7A3D692 /* Pods_Plex_PodCast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plex_PodCast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		575D24672503392A0012A0FA /* Plex-PodCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plex-PodCast.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		575D246C2503392A0012A0FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		575D246E2503392A0012A0FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +35,13 @@
 		575D248025033A0E0012A0FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/PodcastsCourseLBTA_ep2_MainTabBarController/PodcastsCourseLBTA/PodcastsCourseLBTA/Assets.xcassets; sourceTree = "<group>"; };
 		575D248425033A5D0012A0FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		575D24862506C0F50012A0FA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		575D24892507432A0012A0FA /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
+		575D248C250746C30012A0FA /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		575D248F2509BC390012A0FA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		57BE0A51250FEFBA00D9ACB2 /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		57BE0A53250FF01900D9ACB2 /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
+		C3E6C9B23A2D58FB7F4E9713 /* Pods-Plex-PodCast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plex-PodCast.debug.xcconfig"; path = "Target Support Files/Pods-Plex-PodCast/Pods-Plex-PodCast.debug.xcconfig"; sourceTree = "<group>"; };
+		D7C4FDC70C8AE7C1AF4318C9 /* Pods-Plex-PodCast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plex-PodCast.release.xcconfig"; path = "Target Support Files/Pods-Plex-PodCast/Pods-Plex-PodCast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEEE7DDFDC29CF25244C036 /* Pods_Plex_PodCast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216BD4F457DA159499B78A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02AE5AAE47D40F7AC7A3D692 /* Pods_Plex_PodCast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		575D245E2503392A0012A0FA = {
 			isa = PBXGroup;
 			children = (
 				575D24692503392A0012A0FA /* Plex-PodCast */,
 				575D24682503392A0012A0FA /* Products */,
+				6DBD0A12B0FA06AAD7541B2A /* Pods */,
+				216BD4F457DA159499B78A25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +85,10 @@
 		575D24692503392A0012A0FA /* Plex-PodCast */ = {
 			isa = PBXGroup;
 			children = (
+				575D248E2509BC1E0012A0FA /* API */,
+				575D248B250746B00012A0FA /* Models */,
+				575D2488250743080012A0FA /* Controllers */,
+				575D24B1250FDF370012A0FA /* Views */,
 				575D247E250339E20012A0FA /* AppDelegate.swift */,
 				575D246C2503392A0012A0FA /* SceneDelegate.swift */,
 				575D248425033A5D0012A0FA /* ViewController.swift */,
@@ -81,6 +110,48 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		575D2488250743080012A0FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				575D24892507432A0012A0FA /* PodcastsSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		575D248B250746B00012A0FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				575D248C250746C30012A0FA /* Podcast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		575D248E2509BC1E0012A0FA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				575D248F2509BC390012A0FA /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		575D24B1250FDF370012A0FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57BE0A51250FEFBA00D9ACB2 /* PodcastCell.swift */,
+				57BE0A53250FF01900D9ACB2 /* PodcastCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DBD0A12B0FA06AAD7541B2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E6C9B23A2D58FB7F4E9713 /* Pods-Plex-PodCast.debug.xcconfig */,
+				D7C4FDC70C8AE7C1AF4318C9 /* Pods-Plex-PodCast.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 575D247B2503392F0012A0FA /* Build configuration list for PBXNativeTarget "Plex-PodCast" */;
 			buildPhases = (
+				31D4492A14A8FE90EA136D86 /* [CP] Check Pods Manifest.lock */,
 				575D24632503392A0012A0FA /* Sources */,
 				575D24642503392A0012A0FA /* Frameworks */,
 				575D24652503392A0012A0FA /* Resources */,
+				319E22568E9CD62610FAADC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,11 +214,54 @@
 			files = (
 				575D24772503392F0012A0FA /* LaunchScreen.storyboard in Resources */,
 				575D248125033A0E0012A0FA /* Assets.xcassets in Resources */,
+				57BE0A54250FF01900D9ACB2 /* PodcastCell.xib in Resources */,
 				575D24742503392F0012A0FA /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		319E22568E9CD62610FAADC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plex-PodCast/Pods-Plex-PodCast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plex-PodCast/Pods-Plex-PodCast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plex-PodCast/Pods-Plex-PodCast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31D4492A14A8FE90EA136D86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plex-PodCast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		575D24632503392A0012A0FA /* Sources */ = {
@@ -153,9 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				575D248525033A5D0012A0FA /* ViewController.swift in Sources */,
+				575D248D250746C30012A0FA /* Podcast.swift in Sources */,
 				575D247F250339E20012A0FA /* AppDelegate.swift in Sources */,
+				575D248A2507432A0012A0FA /* PodcastsSearchController.swift in Sources */,
 				575D24872506C0F50012A0FA /* MainTabBarController.swift in Sources */,
 				575D246D2503392A0012A0FA /* SceneDelegate.swift in Sources */,
+				575D24902509BC390012A0FA /* APIService.swift in Sources */,
+				57BE0A52250FEFBA00D9ACB2 /* PodcastCell.swift in Sources */,
 				575D246F2503392A0012A0FA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +410,7 @@
 		};
 		575D247C2503392F0012A0FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E6C9B23A2D58FB7F4E9713 /* Pods-Plex-PodCast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +431,7 @@
 		};
 		575D247D2503392F0012A0FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C4FDC70C8AE7C1AF4318C9 /* Pods-Plex-PodCast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
