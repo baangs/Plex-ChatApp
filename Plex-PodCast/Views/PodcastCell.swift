@@ -18,6 +18,32 @@ class PodcastCell: UITableViewCell {
     
     @IBOutlet weak var episodeCountLabel: UILabel!
     
-    var podcast: Podcast!
+    var podcast: Podcast! {
+        didSet {
+            trackNameLabel.text = podcast.trackName
+            artistNameLabel.text = podcast.artistName
+            
+            
+            episodeCountLabel.text = "\(podcast.trackCount ?? 0) Episodes" //loading track count
+            
+            print("Image is loading", podcast.artworkUrl60 ?? "")
+            
+            guard let url = URL(string: podcast.artworkUrl60 ?? "") else {
+                return
+            }
+            URLSession.shared.dataTask(with: url) { (data, _, _) in
+                print("finished downloading image data", data!)
+                
+                guard let data = data else {return}
+                
+                DispatchQueue.main.async {
+                     self.podcastImageView.image = UIImage(data: data)
+                }
+                
+               
+                
+            }.resume()
+        }
+    }
     
 }
